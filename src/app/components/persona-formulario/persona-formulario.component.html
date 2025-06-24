@@ -1,0 +1,32 @@
+
+<div class="container mt-4">
+  <h2>Crear Nueva Persona</h2>
+  <form [formGroup]="personaForm" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label for="nombre" class="form-label">Nombre</label>
+      <input id="nombre" type="text" class="form-control" formControlName="nombre" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="email" class="form-label">Correo Electrónico</label>
+      <input id="email" type="email" class="form-control" formControlName="email" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="direccion" class="form-label">Dirección</label>
+      <input id="direccion" type="text" class="form-control" formControlName="direccion" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="tipoDocumento" class="form-label">Tipo de Documento</label>
+      <input id="tipoDocumento" type="text" class="form-control" formControlName="tipoDocumento" required />
+    </div>
+
+    <div class="mb-3">
+      <label for="documento" class="form-label">Número de Documento</label>
+      <input id="documento" type="text" class="form-control" formControlName="documento" required />
+    </div>
+
+    <button type="submit" class="btn btn-primary">Guardar</button>
+  </form>
+</div>

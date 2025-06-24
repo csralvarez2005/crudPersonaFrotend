@@ -1,0 +1,29 @@
+<div class="container mt-4">
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="mb-0">Listado de Personas</h2>
+    <a routerLink="/personas/nuevo" class="btn btn-primary">Agregar Persona</a>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-bordered">
+      <thead class="table-dark">
+        <tr>
+          <th>Nombre</th>
+          <th>Tipo de Documento</th>
+          <th>Número de Documento</th>
+          <th>Email</th>
+          <th>Dirección</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let persona of personas">
+          <td>{{ persona.nombre }}</td>
+          <td>{{ persona.tipoDocumento }}</td>
+          <td>{{ persona.documento }}</td>
+          <td>{{ persona.email }}</td>
+          <td>{{ persona.direccion }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
