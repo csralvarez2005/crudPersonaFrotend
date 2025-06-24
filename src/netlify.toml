@@ -1,0 +1,6 @@
+[build]
+  command = "ng build --configuration=production"
+  publish = "dist/formulario-becas"
+
+[context.production.environment]
+  NODE_ENV = "production"
