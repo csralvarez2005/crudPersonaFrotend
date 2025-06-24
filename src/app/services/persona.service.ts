@@ -2,12 +2,13 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Persona } from '../models/persona.model';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class PersonaService {
-  private apiUrl = 'http://localhost:3000/api/personas'; // Cambia si usas proxy o producción
+  private apiUrl = environment.apiUrl;  // ✅ Cargamos la URL desde el entorno
 
   constructor(private http: HttpClient) {}
 
@@ -35,6 +36,4 @@ export class PersonaService {
   eliminarPersona(id: number): Observable<void> {
     return this.http.delete<void>(`${this.apiUrl}/${id}`);
   }
-
-  
 }
