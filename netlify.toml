@@ -1,6 +1,6 @@
 [build]
-command = "ng build --configuration=production"
-publish = "dist/crud-persona-frontend/browser"
+  command = "ng build --configuration=production"
+  publish = "dist/crud-persona-frontend/browser"  <-- esta línea debe tener 2 espacios al inicio
 
 [context.production.environment]
   NODE_ENV = "production"
